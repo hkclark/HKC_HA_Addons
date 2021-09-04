@@ -27,14 +27,12 @@ Follow these steps to get the add-on installed on your system:
 3. Go to the Configuration tab in this Addon and enter the name and path of the
     configured file you created in Step #2 above.
 4. And you need to add the `trusted_proxies` section (requests from reverse proxies will be blocked if these options are not set).
-
   ```yaml
   http:
     use_x_forwarded_for: true
     trusted_proxies:
       - 172.30.33.0/24
   ```
-
 6. Save configuration.
 7. Start the add-on.
 8. Check the add-on log output to see the result.
