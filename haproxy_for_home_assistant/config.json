@@ -11,7 +11,7 @@
   },
   "map": ["ssl", "share"],
   "options": {
-    "configfile": null
+    "configfile": "share/haproxy_addon/haproxy.cfg"
   },
   "schema": {
     "configfile": "str"
