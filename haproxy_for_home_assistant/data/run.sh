@@ -1,7 +1,7 @@
 #!/usr/bin/env bashio
 set -e
 
-cat /ssl/fullchain.pem /ssl/privkey.pem > /ssl/combo.pem
+cat /ssl/fullchain.pem /ssl/privkey.pem > /etc/ssl/combo.pem
 
 CONFIGFILE=$(bashio::config 'configfile')
 
