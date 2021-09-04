@@ -1,0 +1,25 @@
+{
+  "name": "Home Assistant NGINX Raw Proxy",
+  "version": "1.0.0",
+  "slug": "ha_nginx_raw_proxy",
+  "description": "A fully configurable Nginx proxy",
+  "url": "https://github.com/hkclark/HA_Nginx_Raw_Proxy",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "ports": {
+    "80/tcp": null,
+    "443/tcp": 443
+  },
+  "map": ["ssl", "share", "config"],
+  "options": {
+    "domain": null,
+    "certfile": "fullchain.pem",
+    "keyfile": "privkey.pem",
+    "configfile": null
+  },
+  "schema": {
+    "domain": "str",
+    "certfile": "str",
+    "keyfile": "str",
+    "configfile": "str"
+  }
+}

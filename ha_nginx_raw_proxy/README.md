@@ -1,6 +1,7 @@
 # Home Assistant Add-on: Home Assistant NGINX Raw Proxy
 
-Sets up a fully configurable NGINX proxy.
+Sets up a fully configurable NGINX proxy.  The configuration file is supplied
+as a plain (aka "raw") file with no additional processing.
 
 ![Supports aarch64 Architecture][aarch64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armhf Architecture][armhf-shield] ![Supports armv7 Architecture][armv7-shield] ![Supports i386 Architecture][i386-shield]
 
