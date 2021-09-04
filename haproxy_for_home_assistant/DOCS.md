@@ -25,8 +25,10 @@ Follow these steps to get the add-on installed on your system:
     Note: Don't forget to include references to `ssl/fullchain.pem` and
     `ssl/privkey.pem` if you want to use SSL.
 3. Go to the Configuration tab in this Addon and enter the name and path of the
-    configured file you created in Step #2 above.
-4. And you need to add the `trusted_proxies` section (requests from reverse proxies will be blocked if these options are not set).
+    configured file you created in Step #2 above.  Note that you can skip this step
+    if you are using the recommended file/path name (`share/haproxy_addon/haproxy.cfg`).
+4. And you need to add the `trusted_proxies` section (requests from reverse
+    proxies will be blocked if these options are not set).
   ```yaml
   http:
     use_x_forwarded_for: true
