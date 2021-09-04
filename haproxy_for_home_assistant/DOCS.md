@@ -52,8 +52,36 @@ A file containing the full HAProxy configuration to use.
 
 ### Example Configuration File
 
-Coming soon.
+```
+global
+    log         stdout local2 debug
+    pidfile     /var/run/haproxy.pid
+    maxconn     4000
+    user        haproxy
+    group       haproxy
 
+defaults
+    mode                    http
+    log                     global
+    option                  httplog
+    option                  http-keep-alive
+    option                  redispatch
+    retries                 3
+    timeout http-request    10s
+    timeout queue           1m
+    timeout connect         10s
+    timeout client          1m
+    timeout server          1m
+    timeout http-keep-alive 10s
+    timeout check           10s
+
+frontend https
+    bind :443 ssl crt /etc/ssl/combo.pem
+    default_backend ha_svr
+
+backend ha_svr
+   server ha homeassistant.local.hass.io:8123
+```
 
 ## Support
 
